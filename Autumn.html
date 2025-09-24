@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Harvest Journal</title>
+  
+</head>
+<body>
+    <div class="journal-container">
+        <div class="journal-header">
+            <h1>🌾 Harvest Journal 🌾</h1>
+            <p>Cultivate your daily harvest of productivity</p>
+        </div>
+
+        <div class="shelf-navigation">
+            <button class="shelf-tab active" data-tab="tasks">🍎 Tasks</button>
+            <button class="shelf-tab" data-tab="memories">🎃 Memories</button>
+            <button class="shelf-tab" data-tab="notes">🏺 Notes</button>
+        </div>
+
+        <div class="content-area">
+            <!-- Tasks Tab -->
+            <div class="tab-content active" id="tasks">
+                <h2><span class="fruit-icon">🍎</span>Daily Tasks</h2>
+                <input type="text" class="input-field" id="taskInput" placeholder="Plant a new task...">
+                <button class="add-button" onclick="addTask()">Plant Task</button>
+                <div id="taskList">
+                    <div class="empty-state">🌱 Your task garden is ready for planting!</div>
+                </div>
+            </div>
+
+            <!-- Memories Tab -->
+            <div class="tab-content" id="memories">
+                <h2><span class="fruit-icon">🎃</span>Harvest Memories</h2>
+                <input type="text" class="input-field" id="memoryInput" placeholder="Capture a golden memory...">
+                <button class="add-button" onclick="addMemory()">Preserve Memory</button>
+                <div id="memoryList">
+                    <div class="empty-state">🍂 Your memory collection awaits the first harvest!</div>
+                </div>
+            </div>
+
+            <!-- Notes Tab -->
+            <div class="tab-content" id="notes">
+                <h2><span class="fruit-icon">🏺</span>Recipe Notes</h2>
+                <input type="text" class="input-field" id="noteInput" placeholder="Jot down a recipe for success...">
+                <button class="add-button" onclick="addNote()">Store Note</button>
+                <div id="noteList">
+                    <div class="empty-state">📜 Your recipe book is ready for your wisdom!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jar-container">
+        <div class="jar">
+            <div class="jar-count" id="jarCount">0</div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+</body>
+</html>
